@@ -61,7 +61,7 @@ namespace Jellyfin.Sdk.Generated.Models
 #endif
         /// <summary>Gets or sets the minimum amount of segments.</summary>
         public int? MinSegments { get; set; }
-        /// <summary>Media streaming protocol.Lowercase for backwards compatibility.</summary>
+        /// <summary>Gets or sets the protocol.</summary>
         public global::Jellyfin.Sdk.Generated.Models.TranscodingProfile_Protocol? Protocol { get; set; }
         /// <summary>Gets or sets the segment length.</summary>
         public int? SegmentLength { get; set; }

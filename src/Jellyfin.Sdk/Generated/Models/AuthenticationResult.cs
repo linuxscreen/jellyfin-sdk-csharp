@@ -29,7 +29,7 @@ namespace Jellyfin.Sdk.Generated.Models
 #else
         public string ServerId { get; set; }
 #endif
-        /// <summary>Gets or sets the session info.</summary>
+        /// <summary>Session info DTO.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Jellyfin.Sdk.Generated.Models.SessionInfoDto? SessionInfo { get; set; }
@@ -37,7 +37,7 @@ namespace Jellyfin.Sdk.Generated.Models
 #else
         public global::Jellyfin.Sdk.Generated.Models.SessionInfoDto SessionInfo { get; set; }
 #endif
-        /// <summary>Gets or sets the user.</summary>
+        /// <summary>Class UserDto.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Jellyfin.Sdk.Generated.Models.UserDto? User { get; set; }
