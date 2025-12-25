@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Jellyfin.Sdk\Jellyfin.Sdk.csproj" />
+      <ProjectReference Include="..\..\src\Jellyfin.Sdk.Unofficial\Jellyfin.Sdk.Unofficial.csproj" />
     </ItemGroup>
 
 </Project>

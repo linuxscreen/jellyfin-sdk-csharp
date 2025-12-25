@@ -1,0 +1,34 @@
+{
+  "descriptionHash": "AAE8803C2360D1ED8EFE117FC30942146CBB26693FF19DBECD03DD723E61FBEA6438D82B97CBB6032851E4BD0246856669C0CBEA870A636E49D128C60A901A28",
+  "descriptionLocation": "https://raw.githubusercontent.com/linuxscreen/config/refs/heads/main/jellyfin-openapi-stable.json",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.28.0",
+  "clientClassName": "BaseJellyfinApiClient",
+  "typeAccessModifier": "Public",
+  "clientNamespaceName": "Jellyfin.Sdk.Unofficial.Generated",
+  "language": "CSharp",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": true,
+  "includeAdditionalData": true,
+  "disableSSLValidation": false,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Text.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": []
+}

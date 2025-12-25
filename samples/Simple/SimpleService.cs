@@ -1,5 +1,5 @@
-using Jellyfin.Sdk;
-using Jellyfin.Sdk.Generated.Models;
+using Jellyfin.Sdk.Unofficial;
+using Jellyfin.Sdk.Unofficial.Generated.Models;
 
 namespace Simple;
 
@@ -114,7 +114,7 @@ public class SimpleService : IDisposable
             Console.WriteLine("Printing Views:");
             foreach (var view in views.Items)
             {
-                var requestInformation = _jellyfinApiClient.Items[view.Id.Value].Images[ImageType.Primary.ToString()]
+                var requestInformation = _jellyfinApiClient.Items[view.Id].Images[ImageType.Primary.ToString()]
                     .ToGetRequestInformation();
                 var uri = _jellyfinApiClient.BuildUri(requestInformation);
                 

@@ -9,7 +9,7 @@ using Nuke.Common.Tools.DotNet;
 public partial class Generate : NukeBuild
 {
     const string StableOpenApi = """
-                                 "descriptionLocation": "https://api.jellyfin.org/openapi/jellyfin-openapi-stable.json"
+                                 "descriptionLocation": "https://raw.githubusercontent.com/linuxscreen/config/refs/heads/main/jellyfin-openapi-stable.json"
                                  """;
     
     const string UnstableOpenApi = """
@@ -34,7 +34,7 @@ public partial class Generate : NukeBuild
 
     Target CleanGenerated => g => g.Executes(() =>
     {
-        var generatedDirectory = new DirectoryInfo(Path.Combine(Solution.Jellyfin_Sdk.Directory, "Generated"));
+        var generatedDirectory = new DirectoryInfo(Path.Combine(Solution.Jellyfin_Sdk_Unofficial.Directory, "Generated"));
 
         foreach (var file in generatedDirectory.GetFiles())
         {
@@ -42,7 +42,12 @@ public partial class Generate : NukeBuild
             {
                 continue;
             }
-            
+
+            if (file.Name.EndsWith("Reactive.cs")) // 跳过 Reactive 相关文件, 改文件扩展了一些字段使得支持 Reactive 功能
+            {
+                continue;
+            }
+
             file.Delete();
         }
 
@@ -56,7 +61,7 @@ public partial class Generate : NukeBuild
         .DependsOn(RestoreTools, CleanGenerated)
         .Executes(() =>
         {
-            var configPath = Path.Combine(Solution.Jellyfin_Sdk.Directory, "Generated", "kiota-lock.json");
+            var configPath = Path.Combine(Solution.Jellyfin_Sdk_Unofficial.Directory, "Generated", "kiota-lock.json");
             var config = File.ReadAllText(configPath);
 
             var desiredSpecification = Configuration == Configuration.Stable
@@ -73,10 +78,10 @@ public partial class Generate : NukeBuild
         {
             DotNetTasks.DotNet(
                 arguments: "kiota update --output Generated",
-                workingDirectory: Solution.Jellyfin_Sdk.Directory);
+                workingDirectory: Solution.Jellyfin_Sdk_Unofficial.Directory);
             
             // TODO remove when Kiota 1.1.2 is released.
-            var outputPath = Path.Combine(Solution.Jellyfin_Sdk.Directory, "Generated");
+            var outputPath = Path.Combine(Solution.Jellyfin_Sdk_Unofficial.Directory, "Generated");
             foreach (var file in Directory.EnumerateFiles(outputPath, "*.cs", SearchOption.AllDirectories))
             {
                 var contents = File.ReadAllText(file);

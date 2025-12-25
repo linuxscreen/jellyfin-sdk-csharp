@@ -2,7 +2,7 @@
 using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text;
-using Jellyfin.Sdk;
+using Jellyfin.Sdk.Unofficial;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Kiota.Abstractions;
 using Microsoft.Kiota.Abstractions.Authentication;
