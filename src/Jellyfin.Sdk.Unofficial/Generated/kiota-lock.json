@@ -1,6 +1,6 @@
 {
-  "descriptionHash": "AAE8803C2360D1ED8EFE117FC30942146CBB26693FF19DBECD03DD723E61FBEA6438D82B97CBB6032851E4BD0246856669C0CBEA870A636E49D128C60A901A28",
-  "descriptionLocation": "https://raw.githubusercontent.com/linuxscreen/config/refs/heads/main/jellyfin-openapi-stable.json",
+  "descriptionHash": "DB3E090C8578CC645101DEED807F76C87883A080EDDD18A5F609A4B571A29581B64A94888F9B7A201549619ADE605BA94E5BE895BF8490460864068969EE3771",
+  "descriptionLocation": "../../../api/jellyfin-openapi-stable.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.28.0",
   "clientClassName": "BaseJellyfinApiClient",

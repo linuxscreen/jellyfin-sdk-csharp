@@ -13,6 +13,8 @@ namespace Jellyfin.Sdk.Unofficial.Generated.Models
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ChapterInfo : IParsable
     {
+        /// <summary>Index of chapterInfo.</summary>
+        public long? ChapterIndex { get; set; }
         /// <summary>The ImageDateModified property</summary>
         public DateTimeOffset? ImageDateModified { get; set; }
         /// <summary>Gets or sets the image path.</summary>
@@ -31,6 +33,8 @@ namespace Jellyfin.Sdk.Unofficial.Generated.Models
 #else
         public string ImageTag { get; set; }
 #endif
+        /// <summary>The MarkerType property</summary>
+        public global::Jellyfin.Sdk.Unofficial.Generated.Models.MarkerType? MarkerType { get; set; }
         /// <summary>Gets or sets the name.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,9 +63,11 @@ namespace Jellyfin.Sdk.Unofficial.Generated.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "ChapterIndex", n => { ChapterIndex = n.GetLongValue(); } },
                 { "ImageDateModified", n => { ImageDateModified = n.GetDateTimeOffsetValue(); } },
                 { "ImagePath", n => { ImagePath = n.GetStringValue(); } },
                 { "ImageTag", n => { ImageTag = n.GetStringValue(); } },
+                { "MarkerType", n => { MarkerType = n.GetEnumValue<global::Jellyfin.Sdk.Unofficial.Generated.Models.MarkerType>(); } },
                 { "Name", n => { Name = n.GetStringValue(); } },
                 { "StartPositionTicks", n => { StartPositionTicks = n.GetLongValue(); } },
             };
@@ -73,9 +79,11 @@ namespace Jellyfin.Sdk.Unofficial.Generated.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             _ = writer ?? throw new ArgumentNullException(nameof(writer));
+            writer.WriteLongValue("ChapterIndex", ChapterIndex);
             writer.WriteDateTimeOffsetValue("ImageDateModified", ImageDateModified);
             writer.WriteStringValue("ImagePath", ImagePath);
             writer.WriteStringValue("ImageTag", ImageTag);
+            writer.WriteEnumValue<global::Jellyfin.Sdk.Unofficial.Generated.Models.MarkerType>("MarkerType", MarkerType);
             writer.WriteStringValue("Name", Name);
             writer.WriteLongValue("StartPositionTicks", StartPositionTicks);
         }

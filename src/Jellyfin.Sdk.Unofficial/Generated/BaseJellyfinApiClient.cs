@@ -12,6 +12,7 @@ using Jellyfin.Sdk.Unofficial.Generated.Collections;
 using Jellyfin.Sdk.Unofficial.Generated.Devices;
 using Jellyfin.Sdk.Unofficial.Generated.DisplayPreferences;
 using Jellyfin.Sdk.Unofficial.Generated.EnvironmentNamespace;
+using Jellyfin.Sdk.Unofficial.Generated.Episode;
 using Jellyfin.Sdk.Unofficial.Generated.FallbackFont;
 using Jellyfin.Sdk.Unofficial.Generated.Genres;
 using Jellyfin.Sdk.Unofficial.Generated.GetUtcTime;
@@ -130,6 +131,11 @@ namespace Jellyfin.Sdk.Unofficial.Generated
         public global::Jellyfin.Sdk.Unofficial.Generated.EnvironmentNamespace.EnvironmentRequestBuilder Environment
         {
             get => new global::Jellyfin.Sdk.Unofficial.Generated.EnvironmentNamespace.EnvironmentRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The Episode property</summary>
+        public global::Jellyfin.Sdk.Unofficial.Generated.Episode.EpisodeRequestBuilder Episode
+        {
+            get => new global::Jellyfin.Sdk.Unofficial.Generated.Episode.EpisodeRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The FallbackFont property</summary>
         public global::Jellyfin.Sdk.Unofficial.Generated.FallbackFont.FallbackFontRequestBuilder FallbackFont

@@ -8,10 +8,13 @@ using Nuke.Common.Tools.DotNet;
 
 public partial class Generate : NukeBuild
 {
+    // const string StableOpenApi = """
+    //                              "descriptionLocation": "https://raw.githubusercontent.com/linuxscreen/config/refs/heads/main/jellyfin-openapi-stable.json"
+    //                              """;
     const string StableOpenApi = """
-                                 "descriptionLocation": "https://raw.githubusercontent.com/linuxscreen/config/refs/heads/main/jellyfin-openapi-stable.json"
+                                 "descriptionLocation": "../../../api/jellyfin-openapi-stable.json"
                                  """;
-    
+
     const string UnstableOpenApi = """
                                  "descriptionLocation": "https://api.jellyfin.org/openapi/jellyfin-openapi-unstable.json"
                                  """;
