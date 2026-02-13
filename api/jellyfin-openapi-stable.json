@@ -59739,7 +59739,9 @@
           "ExtraIds",
           "LocalTrailerCount",
           "IsHD",
-          "SpecialFeatureCount"
+          "SpecialFeatureCount",
+          "ProductionYear",
+          "EndDate"
         ],
         "type": "string",
         "description": "Used to control the data that gets attached to DtoBaseItems."

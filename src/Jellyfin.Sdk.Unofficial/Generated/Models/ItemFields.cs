@@ -203,5 +203,13 @@ namespace Jellyfin.Sdk.Unofficial.Generated.Models
         #pragma warning disable CS1591
         SpecialFeatureCount,
         #pragma warning restore CS1591
+        [EnumMember(Value = "ProductionYear")]
+        #pragma warning disable CS1591
+        ProductionYear,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "EndDate")]
+        #pragma warning disable CS1591
+        EndDate,
+        #pragma warning restore CS1591
     }
 }
